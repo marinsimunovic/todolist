@@ -1,0 +1,29 @@
+button {
+  border: 1px solid black;
+  border-radius: var(--border-rounded);
+  padding: 0.5rem 1rem;
+  background-color: var(--color-gray-400);
+  color: var(--color-white);
+  margin-left: 0.5rem;
+  margin-top: 1rem;
+  /* Adjust padding as needed */
+  transition: all 0.3s ease; /* Add transition for smooth animation */
+  &:hover {
+    box-shadow: 0 0.5rem 36px 0 var(--color-gray-400);
+    transform: scale(1.2) translateY(-0.2rem);
+  }
+}
+@keyframes bubble {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
