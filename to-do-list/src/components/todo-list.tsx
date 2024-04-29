@@ -1,5 +1,6 @@
 import { useState } from "react";
 import TodoItem from "./todo-item";
+
 type Task = {
   id: number;
   text: string;
@@ -38,7 +39,7 @@ const TodoList = () => {
       text,
       completed: false,
     };
-    setTasks([...tasks, newTask]);
+    setTasks([newTask, ...tasks]); // Dodajemo novi task na početak polja tasks
     setText("");
   };
 
@@ -59,7 +60,13 @@ const TodoList = () => {
   };
 
   return (
-    <div className="todo-list">
+    <div className="todo__list">
+      <input
+        className="todo__input"
+        value={text}
+        onChange={(e) => setText(e.target.value)}
+      />
+      <button onClick={() => addTask(text)}>Add</button>
       {tasks.map((task) => (
         <TodoItem
           key={task.id}
@@ -68,8 +75,6 @@ const TodoList = () => {
           toggleCompleted={toggleCompleted}
         />
       ))}
-      <input value={text} onChange={(e) => setText(e.target.value)} />
-      <button onClick={() => addTask(text)}>Add</button>
     </div>
   );
 };

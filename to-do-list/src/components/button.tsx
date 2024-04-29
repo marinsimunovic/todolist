@@ -1,15 +1,12 @@
-import { ReactNode } from "react";
+import React from "react";
 
 type Props = {
-  children: ReactNode;
+  onClick: () => void;
+  children: React.ReactNode;
 };
 
-const Button = ({ children }: Props) => {
-  return (
-    <>
-      <button>{children}</button>
-    </>
-  );
+const Button = ({ onClick, children }: Props) => {
+  return <button onClick={onClick}>{children}</button>;
 };
 
 export default Button;

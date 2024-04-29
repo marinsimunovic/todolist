@@ -1,0 +1,24 @@
+{
+  "tasks": [
+    {
+      "id": 1,
+      "text": "ucit",
+      "completed": true
+    },
+    {
+      "id": 2,
+      "text": "oprat sude",
+      "completed": false
+    },
+    {
+      "id": 3,
+      "text": "usisat",
+      "completed": false
+    },
+    {
+      "id": 4,
+      "text": "vjezbat",
+      "completed": false
+    }
+  ]
+}
